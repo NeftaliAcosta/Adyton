@@ -11,7 +11,17 @@
 
 	<script src="js/jquery-1.12.4.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/myjs.js"></script>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "http://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </head>
+
 <body>
 	<div class="container mybody">
 	<div class"myheader"><!--Inicio encabezado del sitio-->
@@ -56,27 +66,29 @@
 
 		<!--Inicio soluciones-->
 		<div class="soluciones">
-			<div class="row">
+		<img src="img/PestSoluciones.png" class="pestaña">
+			<div class="mycontent" id="detalles"></div>
+			<div class="row mysos">
 				<div class="col-xs-12 col-sm-4">
-					<img src="img/S-CCTV.png" class="img-responsive">
+					<img src="img/S-CCTV.png" class="img-responsive" id="SolucionesCCTV">
 				</div>
 				<div class="col-xs-12 col-sm-4">
-					<img src="img/S-Accesos.png" class="img-responsive">
+					<img src="img/S-Accesos.png" class="img-responsive" id="SolucionesACCESOS">
 				</div>
 				<div class="col-xs-12 col-sm-4">
-					<img src="img/S-Asistencia.png" class="img-responsive">
+					<img src="img/S-Asistencia.png" class="img-responsive" id="SolucionesASISTENCIA">
 				</div>
 			</div>
 			<br>
-			<div class="row">
+			<div class="row mysos">
 				<div class="col-xs-12 col-sm-4">
-					<img src="img/S-Alarmas.png" class="img-responsive">
+					<img src="img/S-Alarmas.png" class="img-responsive" id="SolucionesALARMAS">
 				</div>
 				<div class="col-xs-12 col-sm-4">
-					<img src="img/S-Incendio.png" class="img-responsive">
+					<img src="img/S-Incendio.png" class="img-responsive" id="SolucionesINCENDIOS">
 				</div>
 				<div class="col-xs-12 col-sm-4">
-					<img src="img/S-Accesorios.png" class="img-responsive">
+					<img src="img/S-Accesorios.png" class="img-responsive" id="accesorios">
 				</div>
 			</div>
 
@@ -94,25 +106,18 @@
 
 		<!--Inicio Contactanos-->
 		<div class="contactanos">
+		<img src="img/PestContactanos.png" class="pestaña">
 			<h2 id="tcontacto">CONTÁCTANOS</h1>
 			<form role="form">
 				  <fieldset class="form-group">
-					<div class="col-xs-12 col-sm-8">
+					<div class="col-xs-12">
 						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="*Nombre completo">
-					</div>
-					<div class="col-xs-12 col-sm-4">
-						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="*Celular">
 					</div>
 				  </fieldset>
 				  
 				  <fieldset class="form-group">
 				   <div class="col-xs-12 col-sm-6 ">
-					   <div class='input-group date' id='datetimepicker1'>
-							<input type='text' class="form-control" placeholder="*Cumpleaños" />
-							<span class="input-group-addon">
-								<span class="glyphicon glyphicon-calendar"></span>
-							</span>
-						</div>
+							<input type='text' class="form-control" placeholder="Empresa" />
 					</div>
 					<div class="col-xs-12 col-sm-6">
 						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="*E-mail">
@@ -120,23 +125,20 @@
 					</fieldset>
 					
 					<fieldset class="form-group">
-						<div class="col-xs-12 col-sm-6">
-							<select class="form-control" placeholder="*Asunto">
-									<option>Contacto</option>
-									<option>Sugerencias</option>
-									<option>Solicitud de Factura</option>
-									<option>Cotización Personalizada</option>
-							</select>
-								
+						<div class="col-xs-12 col-sm-4">
+									<input type='tel' class="form-control" placeholder="*Teléfono" />
 						</div>
 						
-						<div class="col-xs-12 col-sm-6 ">
-						   <div class='input-group date' id='datetimepicker2'>
-								<input type='text' class="form-control" placeholder="*Fecha y hora de Reservación" />
-								<span class="input-group-addon">
-									<span class="glyphicon glyphicon-calendar"></span>
-								</span>
-							</div>
+						<div class="col-xs-12 col-sm-4">
+									<input type='text' class="form-control" placeholder="Ciudad / Estado" />
+						</div>
+
+						<div class="col-xs-12 col-sm-4">
+							<select class="form-control" >
+									<option>*Requiero</option>
+		
+							</select>
+								
 						</div>
 					</fieldset>
 					<fieldset class="form-group">
@@ -145,20 +147,38 @@
 						</div>
 					</fieldset>
 				   
-				<a href="#"><img src="imgs/BotonFormulario.png" class="img-responsive btnenviar" id="btnenviar"></a>
-				</form>
+				<a href="#"><img src="img/BotonEnviar.png" class="img-responsive btnenviar" id="btnenviar"></a>
+				</form><br><br>
 		</div>
 		<!--Fin Contacctanos-->
 
 		<!--Inicio Widgets-->
 		<div class="widget">
 			<div class="row">
-				<div class="col-xs-12 col-sm-3">
-					
+				<div class="col-xs-12 col-sm-3 test" >
+				<h2>UBÍCANOS</h2>
+						<div class="google-maps">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.5621307995075!2d-103.4340892163556!3d20.68738585648423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428aec167b0cd73%3A0xf1594ecd65f02578!2sAv.+Inglaterra+7030%2C+Paseos+Universidad%2C+45016+Zapopan%2C+Jal.!5e0!3m2!1ses-419!2smx!4v1469819044573" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
+				<span id="guad">GUADALAJARA</span>	
+				<p>Av. inglaterra 7030 <br> Col. Lomas universidad,<br> Zapopan Jalisco <br>T. 01 (33) 3629 0870 y 3677 4731</p>
+				<span id="mty">MONTERREY</span>	
+				<p>Lope de Vega 200<br> Col. Anahuac San Nicolás<br> de los Garza, N.L.<br>T. 01 (81) 1497 2480</p>
 				</div>
-				<div class="col-xs-12 col-sm-3"></div>
-				<div class="col-xs-12 col-sm-3"></div>
-				<div class="col-xs-12 col-sm-3"></div>
+				<div class="col-xs-12 col-sm-3">
+					<h2>SÍGUENOS EN FACEBOOK</h2>
+					<div class="fb-page" data-href="https://www.facebook.com/GubyNetwork/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/GubyNetwork/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/GubyNetwork/">GubyNetwork</a></blockquote></div>
+				</div>
+				<div class="col-xs-12 col-sm-3">
+				<h2>SÍGUENOS EN TWITTER</h2>
+				            <a class="twitter-timeline"  href="https://twitter.com/TAoAcosta" data-widget-id="341739033875066880">Tweets por el @TAoAcosta.</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
+				</div>
+				<div class="col-xs-12 col-sm-3">
+					<h2>SÍGUENOS EN TWITTER</h2>
+					<img src="img/BotonSuscribirme.png" class="img-responsive">
+				</div>
 			</div>
 		</div>
 		<!--Fin Widgets-->
@@ -168,6 +188,14 @@
 
 	</div><!-- Fin Mybody-->
 
-	
+	<!--Inicio Footer-->
+
+	<div class="container-fluid footer">
+		<p>TEA SOLUCIONES DE SEGURIDAD S.A. DE C.V. | POLÍTICAS Y AVISO LEGAL</p>
+		<span id="firma">BY DIAGONAL360</span>
+	</div>
+	<!--Fin Footer-->
+
+
 </body>
 </html>

@@ -64,18 +64,27 @@ body{
 /*soluciones*/
 
 .soluciones{
-	background-image: url('../img/Soluciones.png');
+	/*background-image: url('../img/Soluciones.png');*/
 	background-size: 100% 100%;
 	height: auto;
 	padding-right: 30px;
 	padding-left: 90px;
 }
 
+.soluciones img{
+	cursor: hand;
+	cursor: pointer;
+}
+
 
 /*Contactanos*/
-
+.pestaña{
+	position: absolute;
+	margin-top:90px;
+	margin-left: -90px;
+}
 .contactanos{
-	background-image: url('../img/PestContactanos.png');
+	/*background-image: url('../img/PestContactanos.png');*/
 	background-repeat: no-repeat;	
 	background-color: #0070bb;
 	padding-right: 30px;
@@ -92,4 +101,67 @@ body{
 	padding-top: 30px;
 	padding-bottom: 30px;
 	font-weight: bold;
+}
+
+.contactanos a #btnenviar{
+	margin:0 auto;
+	width: 15%;
+}
+
+/*Seccion de Widgets*/
+.test{
+	border: 1px solid;
+}
+.widget{
+	margin-top: 50px;
+	padding: 20px;
+}
+
+.widget h2{
+	text-align: center;
+	font-weight: bold;
+	color:#383a43;
+}
+
+.google-maps {
+position: relative;
+padding-bottom: 75%; // This is the aspect ratio
+height: 0;
+overflow: hidden;
+}
+.google-maps iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100% !important;
+height: 100% !important;
+}
+
+.widget p{
+	color:#383a43;
+	font-size: 17px;
+}
+span#guad{
+	font-size: 30px;
+	font-weight: bold;
+	color:#383a43;
+}
+span#mty{
+	font-size: 30px;
+	font-weight: bold;
+	color:#0070bb;
+}
+
+/*Footer*/
+
+.footer{
+	font-size: 17px;
+	background-color:#000000;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #ffffff;
+	text-align: center;
+}
+span#firma{
+	color:gray;
 }
