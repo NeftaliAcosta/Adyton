@@ -45,7 +45,7 @@ body{
 }
 
 .lmenu li.item{
-	background-color: #2f89c4!important;
+	background-color: #0070bb!important;
 	margin-left: 5px;
 	margin-right: 5px;
 	font-weight: bold;	
@@ -54,8 +54,42 @@ body{
 	background-color: #FFFFFF!important;
 	color: #000000;
 }
-/*
-li .isocial{
-	float: right!important;
-	background-color: transparent!important;
-}*/
+
+.separador{
+	height: 5px;
+	background-color: #f1f1f1;
+}
+
+
+/*soluciones*/
+
+.soluciones{
+	background-image: url('../img/Soluciones.png');
+	background-size: 100% 100%;
+	height: auto;
+	padding-right: 30px;
+	padding-left: 90px;
+}
+
+
+/*Contactanos*/
+
+.contactanos{
+	background-image: url('../img/PestContactanos.png');
+	background-repeat: no-repeat;	
+	background-color: #0070bb;
+	padding-right: 30px;
+	padding-left: 90px;
+}
+
+#pcontacto{
+	position: absolute;
+	padding-top: 50px;
+}
+#tcontacto{
+	color: #FFFFFF;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-weight: bold;
+}
