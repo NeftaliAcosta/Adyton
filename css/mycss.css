@@ -1,0 +1,61 @@
+/*
+Autor: Neftalí Acosta
+URL: https://neftaliacosta.com
+Powered by: GubyNetwork
+URL: https://ngubynetwork.com
+Verisón 1.0
+*/
+
+
+body{
+	background-color: #f1f1f1;
+}
+
+/*mybody-> Clase para el contenido del sitio*/
+.mybody{
+	background-color:#FFFFFF;
+	color:#000000;
+	padding: 0px!important;
+}
+
+/*Inicio fix menú*/
+.navbar-default {
+    border-color: transparent!important;
+    padding: 0px!important;
+    background-image:none;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #000000;
+}
+/*Fin fix menú*/
+.mynav{
+	position: absolute!important;
+	background-color: transparent!important;
+	margin-left: 0px!important;
+	right: 0px;
+	margin-right: 17%;
+}
+
+.lmenu li.item{
+	background-color: #2f89c4!important;
+	margin-left: 5px;
+	margin-right: 5px;
+	font-weight: bold;	
+}
+.lmenu li.item:hover{
+	background-color: #FFFFFF!important;
+	color: #000000;
+}
+/*
+li .isocial{
+	float: right!important;
+	background-color: transparent!important;
+}*/
