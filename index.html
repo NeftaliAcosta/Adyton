@@ -1,3 +1,11 @@
+<!--
+Developer: Neftali Acosta
+URL: https://neftaliacosta.com
+Powered by: Diagnoal360
+URL: http://diagonal360.com 
+Todos los derechos reservados.
+-->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,14 +21,11 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/myjs.js"></script>
 	<script type="text/javascript" src="js/pace.min.js"></script>
+
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<script src="js/main.js"></script> <!-- Gem jQuery -->
 	<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "http://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.7";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+
 </head>
 
 <body>
@@ -44,12 +49,12 @@
 
 		      <ul class="nav navbar-nav navbar-right lmenu">
 		        <li class="item" id="item1"><a href="#">Inicio</a></li>
-		        <li class="item" id="item2"><a href="#">Nosotros</a></li>
-		        <li class="item" id="item3"><a href="#">Soluciones</a></li>
-		        <li class="item" id="item4"><a href="#">Éxitos</a></li>
-		        <li class="item" id="item5"><a href="#">Contáctanos</a></li>
-				<li ><a href="#"><img src="img/Facebook.png" class="img-responsive"></a></li>
-				<li ><a href="#"><img src="img/Twetter.png" class="img-responsive"></a></li>
+		        <li class="item" id="item2"><a href="#nosotros">Nosotros</a></li>
+		        <li class="item" id="item3"><a href="#soluciones">Soluciones</a></li>
+		        <li class="item" id="item4"><a href="#exitos">Éxitos</a></li>
+		        <li class="item" id="item5"><a href="#contacto">Contáctanos</a></li>
+				<li id="item6"><a href="#"><img src="img/Facebook.png" class="img-responsive"></a></li>
+				<li id="item7"><a href="#"><img src="img/Twetter.png" class="img-responsive"></a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
@@ -58,7 +63,7 @@
 		</div><!--Fin encabezado del sitio-->
 
 		<!--Inicio quienes somos-->
-		<div class="nosotros">
+		<div class="nosotros" id="nosotros">
 			<img src="img/Nosotros.png" class="img-responsive">
 		</div>
 		<!--Fin quienes somos-->
@@ -66,7 +71,7 @@
 		<div class="separador"></div><!--Separador-->
 
 		<!--Inicio soluciones-->
-		<div class="soluciones">
+		<div class="soluciones" id="soluciones">
 		<img src="img/PestSoluciones.png" class="pestaña">
 			<div class="mycontent" id="detalles"></div>
 			<div class="row mysos">
@@ -100,54 +105,54 @@
 		<div class="separador"></div><!--Separador-->
 
 		<!--Inicio Clientes-->
-		<div class="clientes">
+		<div class="clientes" id="exitos">
 			<img src="img/Clientes.png" class="img-responsive">
 		</div>
 		<!--Fin Clientes-->
 
 		<!--Inicio Contactanos-->
-		<div class="contactanos">
+		<div class="contactanos" id="contacto">
 		<img src="img/PestContactanos.png" class="pestaña">
 			<h2 id="tcontacto">CONTÁCTANOS</h1>
 			<form role="form">
 				  <fieldset class="form-group">
 					<div class="col-xs-12">
-						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="*Nombre completo">
+						<input type="text" class="form-control" id="nombre" placeholder="*Nombre completo">
 					</div>
 				  </fieldset>
 				  
 				  <fieldset class="form-group">
 				   <div class="col-xs-12 col-sm-6 ">
-							<input type='text' class="form-control" placeholder="Empresa" />
+							<input type='text' class="form-control" id="empresa" placeholder="Empresa" />
 					</div>
 					<div class="col-xs-12 col-sm-6">
-						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="*E-mail">
+						<input type="email" class="form-control" id="correo" placeholder="*E-mail">
 					</div>
 					</fieldset>
 					
 					<fieldset class="form-group">
 						<div class="col-xs-12 col-sm-4">
-									<input type='tel' class="form-control" placeholder="*Teléfono" />
+									<input type='tel' class="form-control" id="telefono" placeholder="*Teléfono" />
 						</div>
 						
 						<div class="col-xs-12 col-sm-4">
-									<input type='text' class="form-control" placeholder="Ciudad / Estado" />
+									<input type='text' class="form-control" id="estado" placeholder="Ciudad / Estado" />
 						</div>
 
 						<div class="col-xs-12 col-sm-4">
-							<select class="form-control" >
+							<select class="form-control" id="asunto">
 									<option>*Requiero</option>
-		
+									<option>Otro</option>
 							</select>
 								
 						</div>
 					</fieldset>
 					<fieldset class="form-group">
 						<div class="col-xs-12">
-							<textarea class="form-control" rows="5" placeholder="Comentarios"></textarea>
+							<textarea class="form-control" rows="5" id="mensaje" placeholder="Comentarios"></textarea>
 						</div>
 					</fieldset>
-				   
+				   <p id="msj"></p>
 				<a href="#"><img src="img/BotonEnviar.png" class="img-responsive btnenviar" id="btnenviar"></a>
 				</form><br><br>
 		</div>
@@ -157,7 +162,7 @@
 		<div class="widget">
 			<div class="row">
 				<div class="col-xs-12 col-sm-3" >
-				<h2>UBÍCANOS</h2>
+				<h2>UBÍCANOS</h2><br><br>
 						<div class="google-maps">
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.5621307995075!2d-103.4340892163556!3d20.68738585648423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428aec167b0cd73%3A0xf1594ecd65f02578!2sAv.+Inglaterra+7030%2C+Paseos+Universidad%2C+45016+Zapopan%2C+Jal.!5e0!3m2!1ses-419!2smx!4v1469819044573" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 						</div>
@@ -192,11 +197,150 @@
 	<!--Inicio Footer-->
 
 	<div class="container-fluid footer">
-		<p>TEA SOLUCIONES DE SEGURIDAD S.A. DE C.V. | POLÍTICAS Y AVISO LEGAL</p>
-		<span id="firma">BY DIAGONAL360</span>
+		<p>TEA SOLUCIONES DE SEGURIDAD S.A. DE C.V. | <a href="#" data-toggle="modal" data-target="#myModal">POLÍTICAS Y AVISO LEGAL</a></p>
+		<span id="firma"><a href="http://diagonal360.com">BY DIAGONAL360</a></span><br>
 	</div>
+
 	<!--Fin Footer-->
+<!-- Términos y Condiciones-->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>-->
+        <h4 class="modal-title">POLITICAS Y AVISO LEGAL</h4>
+      </div>
+      <div class="modal-body">
+        <p>El presente documento constituye el Aviso de privacidad de Privacidad para efectos de lo dispuesto en la Ley Federal de Protección de 
+		Datos Personales en Posesión de los Particulares (la “LFPDP”) y las disposiciones que emanan de ella o se relacionan con la misma. Este 
+		Aviso de privacidad aplica a la información personal recopilada sobre el Titular por The Urban Live en su carácter de Responsable. </p>
+
+		<p>Para los efectos del presente Aviso de privacidad, los términos que no estén contemplados en el mismo tendrán el significado que se les
+		atribuye en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDP). El presente Aviso de privacidad tiene
+		por objeto establecer  términos y condiciones por medio de los cuales The Urban Live recibirá y protegerá los Datos Personales del Titular,
+		a efecto de proteger su privacidad; utilizará los Datos Personales del Titular, y /o realizará en su caso las transferencias sus Datos 
+		Personales a terceros</p>
+		
+		
+		<p>1. CONSENTIMIENTO DEL TITULAR.<br>
+		Para efectos de lo dispuesto en la LFPDP y en particular en su Artículo 17, el Titular manifiesta que: 
+		1.1-El presente Aviso de privacidad le ha sido dado a conocer por el Responsable.<br>
+		1.2-Que ha leído, entendido y acordado los términos señalados en este Aviso de privacidad, por lo que otorga su consentimiento respecto al 
+		tratamiento de sus Datos Personales conforme lo establece la LFPDP y legislación aplicable. <br>
+		1.3-Que en caso de que los Datos Personales recopilados incluyan Datos Personales sensibles o financieros, sean estos proporcionados 
+		en formato impreso, o utilizando medios electrónicos, son actos que constituyen  su consentimiento expreso como su titular en términos
+		del segundo párrafo del artículo 8 de la LFPDP y demás legislación aplicable. <br>
+		1.4-Que otorga su consentimiento para que The Urban Live o sus Encargados realicen transferencias de Datos Personales a terceros
+		nacionales o extranjeros, en el entendido de que el tratamiento que dichos terceros den a sus Datos Personales deberá ajustarse a lo
+		establecido en este Aviso de privacidad.<br>
+		1.5- Que en caso de que el Titular no se oponga a los términos del Aviso de privacidad se considerará acordado y consentido su contenido
+		y que el consentimiento del Titular podrá ser revocado en cualquier momento por éste.<br>
+		No obstante cualquier disposición de este Aviso de privacidad, el Titular reconoce que no se requerirá de su consentimiento para el
+		tratamiento de Datos Personales por parte del Responsable o de terceros en cualquiera de los casos señalados en el Artículo 10 de la LFPDP. 
+		</p>
+		<p>
+		2. RECOLECCIÓN DE LOS DATOS PERSONALES.<br>
+		La recolección de Datos Personales podrá efectuarse, por comunicación vía telefónica con el Responsable o con sus Encargados, empleados o bien, mediante entrega directa al Responsable o mediante el uso de correos electrónicos y/o mensajes cortos de texto, o mediante la utilización de sus sitios Web,  mediante el uso de herramientas de captura automática de datos. Las cuales permiten recolectar la información que envía su navegador a dichos sitios Web, tales como el tipo de navegador que utiliza, el idioma de usuario, y la dirección IP de sitios Web que utilizó para acceder a los sitios del Responsable o Encargados. 
+		Los siguientes son ejemplos, a título enunciativo mas no limitativo, de información que el Responsable puede recopilar: nombre y apellidos; fecha de nacimiento; domicilio, sea particular, del trabajo, o fiscal; dirección de correo electrónico, personal o del trabajo; nombre de identificación en redes sociales; número telefónico, particular o del trabajo; número de teléfono celular; número  cuentas bancarias; clave del Registro Federal de Contribuyentes (RFC); Clave Única de Registro de Población (CURP). <br>
+		Dentro de la documentación que puede ser recolectada por The Urban Live para la verificación de la identidad del Titular de los Datos Personales se encuentra la credencial de elector; la cartilla de identidad del servicio militar nacional liberada; la cédula profesional; pasaporte; Forma migratoria; la cédula de registro en el RFC; la cédula de registro con la CURP; el comprobante de domicilio; el informe especial de crédito emitido por una Sociedad de Información Crediticia. 
+		</p>
+		
+		<p>3. FINALIDAD DE LOS DATOS PERSONALES. <br>
+		Los Datos Personales del Titular son recolectados y tratados por el Responsable o sus Encargados con la finalidad de permitirle al Titular, llevar a cabo las siguientes actividades con el Responsable:  <br>
+		A) Solicitar, comprar, cambiar, o devolver productos, ofrecidos por The Urban Live;  <br>
+		B) Solicitar, contratar, cambiar o cancelar servicios, ofrecidos por The Urban Live;  <br>
+		C) Solicitar factura o comprobante fiscal digital;  <br>
+		D) Solicitar una cotización, sobre productos y servicios;  <br>
+		E) Contactar el Servicio de Atención a Clientes;  <br>
+		F) Participar en encuestas;  <br>
+		G) Utilizar los distintos servicios de sus correspondientes Sitios Web incluyendo la descarga de contenidos y formatos;  <br>
+		H) Compartir sus comentarios o sugerencias sobre los productos y servicios;  <br>
+		I) Procesar pagos, y <br>
+		J) Cualquier otra actividad de naturaleza análoga a las descritas en los incisos previamente citados.  <br> <br>
+
+		Asimismo, el Responsable, directamente o a través de sus Encargados, puede utilizar sus Datos Personales con la finalidad de:  <br>
+		A) Realizar estudios sobre intereses y comportamiento de sus clientes, consumidores, proveedores, y de aquellos terceros con los que trate;  <br>
+		B) Efectuar estudios de mercado y de consumo a efecto de adquirir y ofrecer productos y servicios personalizados, así como publicidad y contenidos más adecuados a las necesidades de sus clientes, consumidores, proveedores y otros terceros con los que trate;  <br>
+		C) Elaborar estadísticas internas que indiquen los servicios y productos más apreciados por los diferentes segmentos de sus clientes, consumidores, proveedores;  <br>
+		D) Formalizar el proceso transaccional con sus clientes, consumidores, proveedores y otros terceros con los que trate;  <br>
+		E) Gestionar el proceso de requisición, evaluación y adjudicación de proveedores y otros terceros con los que trate;  <br>
+		F) En su caso, verificar la capacidad de crédito y/o pago del Titular, lo cual se podrá efectuar a través de las sociedades de información crediticia, en términos de la Ley para regular las Sociedades de Información Crediticia;  <br>
+		G) Comprobar las transacciones comerciales realizadas por el Titular con el Responsable;  <br>
+		</p>
+		<p>4. TRANSFERENCIAS DE DATOS. <br>
+		Habiendo leído, entendido y acordado los términos expuestos en este Aviso de privacidad, el Titular manifiesta su consentimiento para que el 
+		Responsable o cualquier Encargado realicen transferencias de Datos Personales a terceros nacionales o extranjeros, en el entendido de que el 
+		tratamiento que dichos terceros den a los Datos Personales del Titular deberá ajustarse a lo establecido en este Aviso de privacidad.
+		</p>
+		<p>5. LIMITACIÓN DE USO Y DIVULGACIÓN DE LA INFORMACIÓN. <br>
+		El Responsable y/o sus Encargados conservarán los Datos Personales del Titular durante el tiempo que sea necesario para procesar sus 
+		solicitudes de información, productos y/o servicios, así como para mantener los registros contables, financieros y de auditoría en términos
+		de la LFPDP y de la legislación mercantil, fiscal y administrativa vigente. Además de controlar la divulgación de dichos datos o información
+		de socios comerciales. <br>
+		Los Datos Personales del Titular recolectados por el Responsable y/o sus Encargados se encontrarán protegidos por medidas de seguridad 
+		administrativas, técnicas y físicas adecuadas contra el daño, pérdida, alteración, destrucción o uso, acceso o tratamiento no autorizados,
+		de conformidad con lo dispuesto en la LFPDP y de la regulación administrativa derivada de la misma. No obstante lo señalado anteriormente,
+		The Urban Live no garantiza que terceros no autorizados no puedan tener acceso a los sistemas físicos o lógicos de los Titulares o del 
+		Responsable o en los documentos electrónicos y ficheros almacenados en sus sistemas. En consecuencia, The Urban Live no será en ningún 
+		caso responsable de los daños y perjuicios que pudieran derivarse de dicho acceso no autorizado.
+		</p>
+		<p>
+		6. CAMBIOS AL AVISO DE PRIVACIDAD .<br>
+		The Urban Live se reserva el derecho de actualizar periódicamente el presente Aviso de privacidad para reflejar los cambios en nuestras 
+		prácticas de información. Es responsabilidad del Titular revisar periódicamente el contenido del Aviso de privacidad en el
+		<a href="http://www.theurban.com.mx"><b>www.theurban.com.mx</b></a> en donde se publicarán los cambios realizados conjuntamente con 
+		la fecha de la última actualización. El Responsable entenderá que de no expresar lo contrario, significa que el Titular ha leído,
+		entendido y acordado los términos ahí expuestos, lo que constituye su consentimiento a los cambios y/o actualizaciones respecto al 
+		tratamiento de sus Datos Personales.
+		 <br><br>
+		El (Cliente, proveedor, aspirante, empleado, etc) declara haber leído y comprendido el aviso de privacidad que en cumplimiento 
+		a lo dispuesto por la Ley de acceso a la Información y protección de datos personales, se encuentra disponible en la página electrónica
+		<a href="http://www.theurban.com.mx"><b>www.theurban.com.mx</b></a>  y que acepta someterse al mismo respecto a el manejo de los datos que
+		ha(n) proporcionado a The Urban Live y que quedan bajo su custodia, en los términos de lo señalado en dicho aviso de privacidad.
+
+		</p>
+
+      </div>
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Fin términos y condiciones-->
 
 
+
+
+<!-- notificaciones-->
+<div class="modal fade" id="notificacion">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>-->
+        <h4 class="modal-title">Mensaje</h4>
+      </div>
+      <div class="modal-body">
+		<p id="mymsj"></p>
+      </div>
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- notificaciones-->
+
+
+
+
+
+<a href="#0" class="cd-top">Top</a>
 </body>
 </html>
