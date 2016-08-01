@@ -32,8 +32,21 @@ body{
     border-color: transparent;
 }
 
-.navbar-default .navbar-nav>li>a {
-    color: #000000;
+.navbar-default .navbar-nav>li>.item {
+    background-color:rgba(0, 112, 187, 0.8)!important;
+}
+.navbar-default .navbar-nav>li>a{
+	color: #000000!important;
+	font-size: 22px;
+	font-family: 'Montserrat', sans-serif;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: #ffffff!important;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 5px;
 }
 /*Fin fix menu*/
 .mynav{
@@ -41,18 +54,20 @@ body{
 	background-color: transparent!important;
 	margin-left: 0px!important;
 	right: 0px;
-	margin-right: 17%;
+	margin-right: 10%
 }
 
+
 .lmenu li.item{
-	background-color: #0070bb!important;
+	background-color: rgba(0, 112, 187, 0.8);
 	margin-left: 5px;
 	margin-right: 5px;
-	font-weight: bold;	
+	font-weight: bold;
+	color:#000000!important;
 }
 .lmenu li.item:hover{
-	background-color: #FFFFFF!important;
-	color: #000000;
+	/*background-color: #FFFFFF!important;*/
+	color: #ffffff!important;
 }
 
 .separador{
@@ -61,7 +76,10 @@ body{
 }
 
 #item6, #item7{
-	margin-top: -7px;
+	margin-top: -10px;
+}
+#item6 img, #item7 img{
+	width: 95%;
 }
 
 /*soluciones*/
@@ -87,12 +105,18 @@ body{
 	margin-top:90px;
 	margin-left: -90px;
 }
+.pestañas{
+	position: absolute;
+	margin-top:0px;
+	margin-left: -90px;
+}
 .contactanos{
 	/*background-image: url('../img/PestContactanos.png');*/
 	background-repeat: no-repeat;	
 	background-color: #0070bb;
 	padding-right: 30px;
 	padding-left: 90px;
+	font-family: 'Montserrat', sans-serif;
 }
 
 #pcontacto{
@@ -152,11 +176,15 @@ span#guad{
 	font-size: 30px;
 	font-weight: bold;
 	color:#383a43;
+	cursor: hand;
+	cursor: pointer;
 }
 span#mty{
 	font-size: 30px;
 	font-weight: bold;
 	color:#0070bb;
+	cursor: hand;
+	cursor: pointer;
 }
 
 /*Footer*/
@@ -168,9 +196,13 @@ span#mty{
 	padding-bottom: 10px;
 	color: #ffffff;
 	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+.footer p{
+	font-family: 'Montserrat', sans-serif;
 }
 .footer a{
-	 text-decoration:none;   
+	 font-family: 'Montserrat', sans-serif;
 	 color:#FFFFFF;
 }
 span#firma{
@@ -238,7 +270,7 @@ span#firma{
   opacity: .5;
 }
 .no-touch .cd-top:hover {
-  background-color: #e86256;
+  background-color: #0070bb;
   opacity: 1;
 }
 @media only screen and (min-width: 768px) {
