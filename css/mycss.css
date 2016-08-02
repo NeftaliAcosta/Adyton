@@ -49,15 +49,43 @@ body{
     padding: 10px 5px;
 }
 /*Fin fix menu*/
+@media (max-width: 800px) {
+	.mynav{
+	position: absolute!important;
+	background-color: transparent!important;
+	margin-left: 0px!important;
+	right: 0px;
+	margin-right: 3%
+} 
+}
+@media (min-width: 1200px) {
 .mynav{
 	position: absolute!important;
 	background-color: transparent!important;
 	margin-left: 0px!important;
 	right: 0px;
-	margin-right: 10%
+	margin-right: 5%
+} 
 }
 
-
+@media (min-width: 1600px) {
+	.mynav{
+	position: absolute!important;
+	background-color: transparent!important;
+	margin-left: 0px!important;
+	right: 0px;
+	margin-right: 12%
+}
+}
+@media (min-width: 1900px) {
+	.mynav{
+	position: absolute!important;
+	background-color: transparent!important;
+	margin-left: 0px!important;
+	right: 0px;
+	margin-right: 20%
+}
+}
 .lmenu li.item{
 	background-color: rgba(0, 112, 187, 0.8);
 	margin-left: 5px;
@@ -102,10 +130,12 @@ body{
 /*Contactanos*/
 .pestaña{
 	position: absolute;
-	margin-top:90px;
+	max-width:4%;
+	margin-top:105px;
 	margin-left: -90px;
-}
+} 
 .pestañas{
+	max-width:4%;
 	position: absolute;
 	margin-top:0px;
 	margin-left: -90px;
